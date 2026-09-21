@@ -2,7 +2,7 @@
 
 ## About This Project
 
-<img src="assets/thesis_ga.jpg" width="730">
+<img src="assets/thesis_ga.jpg">
 
 Farmers and seed companies want to know: "Will this seed grow?" The usual way to check the seeds' viability, or their ability to grow into a plant, is destructive, i.e., by cutting seeds open to test them or planting one and waiting for it to germinate. 
 This project explores a faster, non-destructive alternative method of testing seed viability using cutting edge spectroscopy methods (both expensive and affordable ones) combined with powerful machine learning models. 

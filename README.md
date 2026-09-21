@@ -16,31 +16,31 @@ A handheld portable NIR spectroscope was remarkably good at this job, providing 
 ### NIR spectroscopy — raw data
 <img src="results/figures/nir-raw-spectra.jpg" width="600" alt="Mean NIR spectra by treatment">
 
-*Mean NIR absorbance spectra for control, microwave-aged, and UV-aged seeds (n = 300 seeds).*
+*Mean NIR absorbance spectra for control, microwave-treated, and UV-treated seeds (n = 300 seeds).*
 
 <img src="results/figures/nir-raw-pca.jpg" width="600" alt="PCA of raw NIR data">
 
-*PCA on the raw spectra already shows some grouping by treatment, though with overlap.*
+*PCA of the raw spectra already shows some grouping by treatment, though with overlap.*
 
 ### NIR spectroscopy — after preprocessing
 <img src="results/figures/nir-sg1-pca.jpg" width="600" alt="NIR PCA after SG1 preprocessing">
 
-*A Savitzky–Golay 1st-derivative correction sharpened the separation between groups and revealed the spectral regions (900–950 nm, 1400–1450 nm, 1650–1700 nm) driving the differences.*
+*Savitzky–Golay first derivative preprocessing separates the spectra to reveal the separation between groups across the spectral regions (900–950 nm, 1400–1450 nm, 1650–1700 nm).*
 
 <img src="results/figures/nir-plsda-confusion-sg1.jpg" width="700" alt="NIR classification results">
 
-*Both PLS-DA and SVM models reached 100% training, test, and cross-validation accuracy on the SG1-preprocessed data.*
+*Both PLS-DA and SVM models reached 100% training, test, and cross-validation accuracy on the Savitzky–Golay first derivative preprocessed data.*
 
 ### Raman spectroscopy
 <img src="results/figures/raman-raw-spectra-pca.jpg" width="600" alt="Raw Raman spectra and PCA">
 
-*Raman spectra were dominated by background noise, and PCA showed no clear separation between treatment groups.*
+*Raman spectra were dominated by background noise, and PCA showed little to no separation between treatment groups.*
 
 <img src="results/figures/raman-svm-confusion-overfit.jpg" width="600" alt="Raman overfitting">
 
-*Raman-based models reached up to 100% training accuracy but only ~60–70% cross-validation accuracy — a sign of overfitting rather than genuine separability.*
+*Raman-based models reached up to 100% training accuracy but only ~60–70% cross-validation accuracy, a sign of possible overfitting.*
 
 ### Independent validation
 <img src="results/figures/tetrazolium-test.jpg" width="500" alt="Tetrazolium test results">
 
-*Tetrazolium staining, the standard destructive viability test, confirmed that microwave treatment severely reduced seed viability — validating what the NIR model detected non-destructively.*
+*Tetrazolium staining, the standard destructive viability test, confirmed that microwave treatment severely reduced seed viability, validating what the NIR model detected.*

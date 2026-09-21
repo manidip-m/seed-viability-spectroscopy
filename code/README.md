@@ -50,3 +50,4 @@ Each script prints the classification accuracy and preprocessing method used to 
 
 ## Notes
 In my NIR pipeline, I arranged the raw spectral data files as: (CSV files under `data/nir/control/`, `data/nir/microwave/`, `data/nir/uv/`, named like `ND_Ct_<seed>_<scan>.csv`; each CSV file comprises a `***Scan Data***` header block followed by `Wavelength (nm)` and `Absorbance (AU)` columns.
+Software used for obtaining spectral data: https://github.com/InnoSpectra/ISC-NIRScan-GUI

@@ -1,13 +1,19 @@
-%% ==================== IMPROVED RAMAN WDF-TO-MAT CONVERTER ====================
+%% ==================== RAMAN WDF-TO-MAT CONVERTER ====================
 clc; clear; close all;
 diary('raman_processing_log.txt'); % Log all output
 
 % --- 1. Setup ---
-% Define folders and their corresponding numeric labels
+% Define folders and their corresponding numeric labels (relative to this
+% script's own location, so the code runs the same on any machine/OS once
+% the repo is cloned). Assumes the repo layout:
+%   code/Raman_wdf_convert.m alongside data/raman/<group>/
+script_dir = fileparts(mfilename('fullpath'));
+data_root  = fullfile(script_dir, '..', 'data', 'raman');
+
 folders = {
-    'C:\Users\mmani\Documents\UCD_Assignments\Thesis\Data\Raman\ND_Ct_Raman', 0; 
-    'C:\Users\mmani\Documents\UCD_Assignments\Thesis\Data\Raman\ND_Mw_Raman', 1;
-    'C:\Users\mmani\Documents\UCD_Assignments\Thesis\Data\Raman\ND_UV_Raman', 2
+    fullfile(data_root, 'control'),   0;
+    fullfile(data_root, 'microwave'), 1;
+    fullfile(data_root, 'uv'),        2
 };
 
 % QC Parameters

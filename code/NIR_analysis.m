@@ -142,7 +142,7 @@ legend show;
 grid on;
 
 fprintf('PCA analysis on raw data complete.\n');
-%% ================= SECTION 3: SPECTRAL PREPROCESSING =================
+%% ================= SECTION 4: SPECTRAL PREPROCESSING =================
 % --- CHOOSE YOUR PREPROCESSING METHOD ---
 % 1: Raw Data (No Preprocessing)
 % 2: Standard Normal Variate (SNV) 
@@ -201,9 +201,9 @@ end
 
 fprintf('Preprocessing complete. Method used: %s\n', method_name);
 
-%% ================= SECTION 4: PREPROCESSED DATA VISUALIZATION & PCA =================
+%% ================= SECTION 5: PREPROCESSED DATA VISUALIZATION & PCA =================
 % This section visualizes the data AFTER applying the preprocessing method
-% selected in Section 3. Rerun this section after changing the choice in Section 3.
+% selected in Section 4. Rerun this section after changing the choice in Section 4.
 
 disp(['Visualizing data preprocessed with: ' method_name]);
 
@@ -302,7 +302,7 @@ grid on;
 
 fprintf('Visualization and PCA for preprocessed data complete.\n');
 
-%% ================= SECTION 5: PLS-DA CLASSIFICATION =================
+%% ================= SECTION 6: PLS-DA CLASSIFICATION =================
 % 1. Define Parameters
 test_set_size = 0.3;    % Use 30% of the data for testing
 max_components = 7;    % Test models with 1 up to 10 components
@@ -410,7 +410,7 @@ xlabel('Wavelength (nm)');
 ylabel('Coefficient Magnitude');
 grid on;
 
-%% ================= SECTION 6: SVM CLASSIFICATION =================
+%% ================= SECTION 7: SVM CLASSIFICATION =================
 disp('Starting SVM Classification...');
 
 % 1. Train the SVM Model with Automatic Hyperparameter Optimization
@@ -491,7 +491,7 @@ ylabel('Beta Coefficient');
 grid on;
 
 
-%% ================= SECTION 7: FINAL MODEL VALIDATION =================
+%% ================= SECTION 8: FINAL MODEL VALIDATION =================
 % 1. Define Validation Parameters
 k = 10;                     % Number of folds for cross-validation
 n_permutations = 500;       % Number of permutations for the significance test
